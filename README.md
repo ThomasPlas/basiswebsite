@@ -57,7 +57,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
-  
+  In de screen reader ga je langs de footnotes maar dit zijn alleen nummers dus dit is erg onduidelijk
+  Er word gebruik gemaakt van h1,h2 tot h6 maar dit lijkt mij een beetje veel
+  Door de interface heen gaan ging best goed met de screenreader
 
 </details>
 
@@ -69,13 +71,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/homepagina1" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/homepagina2" width="375px" alt="breakdown van de hele pagina deel 2">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/animatie" width="375px" alt="Een scrollbased animation van een filmpje dat die uitzoomd wanneer je scrolled">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/animatie" width="375px" alt="Een Carrousel van verschillende functies van de iPhone 16 pro">
 
 </details>
 
@@ -95,12 +98,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Thomas         | Izaira             | Rens         | Jerry            |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+  | pixels bij     | en dit             | en ik dit    | en dan ik dat    |
+  | responsiveness | dit als er tijd is | nog een punt | dit wil ik zeker |
+  |                | ...                | ...          | ...              |
+  | is een         | ...                | ...          | ...              |
+  | background img  | ...               | ...          | ...              |
+  | symatisch en een| ...               | ...          | ...              |
+  | probleem qua    | ...               | ...          | ...              |
+  | toegankelijkheid| ...               | ...          | ...              |
+  |                | ...                | ...          | ...              |
+  | veel kleuren in | ...               | ...          | ...              |
+  | mijn site maar | ...                | ...          | ...              |
+  |mag ik dit inkorten | ...            | ...          | ...              |
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
