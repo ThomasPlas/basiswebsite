@@ -71,14 +71,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/homepagina1" width="375px" alt="breakdown van de hele pagina">
-  <img src="readme-images/homepagina2" width="375px" alt="breakdown van de hele pagina deel 2">
+  <img src="readme-images/homepagina1.PNG" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/homepagina2.PNG" width="375px" alt="breakdown van de hele pagina deel 2">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/animatie" width="375px" alt="Een scrollbased animation van een filmpje dat die uitzoomd wanneer je scrolled">
+  <img src="readme-images/animatie.PNG" width="375px" alt="Een scrollbased animation van een filmpje dat die uitzoomd wanneer je scrolled">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/animatie" width="375px" alt="Een Carrousel van verschillende functies van de iPhone 16 pro">
+  <img src="readme-images/animatie.PNG" width="375px" alt="Een Carrousel van verschillende functies van de iPhone 16 pro">
 
 </details>
 
