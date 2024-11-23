@@ -44,7 +44,7 @@
 	--hamburger-header-background: rgba(22, 22, 23);
 	--navigatie-tekst: #E8E8ED;
 
-	--button-blauw:#0071e3;
+	--link-blauw:#0071e3;
 
    }
 
@@ -65,7 +65,7 @@
 	src: url(../fonts/sfprodisplaymedium-webfont.woff) format("woff");
 }
 
-html, body {
+body {
 	margin: 0; 
 	padding: 0;
   }
@@ -74,11 +74,11 @@ body{
 	font-family: SanFransisco;
 }
 
-main button{
+/*main button{
 	border-radius: 2em;
 	padding: 7px 15px;
-}  
-
+} 
+*/
 h2{
 	font-family: sanFransisco;
 	/*font-weight: 600;*/
@@ -109,8 +109,6 @@ header nav{
 	background-color: var(--hamburger-header-background);
 }
 
-
-
 .open{
 	translate: 0% 0%;
 	transition: 0.5s;
@@ -125,7 +123,7 @@ main section{
 	height: 30em;
 }
 
-main section img{
+img{
 	max-width: 100%;
 }
 

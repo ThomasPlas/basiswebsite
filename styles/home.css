@@ -1,0 +1,123 @@
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+/********************/
+/* ALGEMENE STYLING */
+/********************/
+
+/**********/
+/* HEADER */
+/**********/
+
+/********/
+/* MAIN */
+/********/
+
+/**********/
+/* FOOTER */
+/**********/
+
+
+/**********/
+/* sections */
+/**********/
+main section{
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center top;
+}
+
+main section h2{
+    color: var(--apple-zwart);
+}
+
+main section a{
+    border: solid var(--link-blauw) 0.1em;
+    border-radius: 2em;
+	padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+main section a:first-of-type{
+    background-color: var(--link-blauw);
+    color: var(--apple-wit);
+}
+
+main section a:last-of-type{
+    color: var(--link-blauw);
+}
+
+main section a:last-of-type:active{
+    color: var(--apple-wit);
+    background-color: var(--link-blauw);
+}
+/**********/
+/* section 1 */
+/**********/
+main section:nth-of-type(1){
+    background-image:url(../images/iPhone16Pro.jpg);
+}
+
+main section:nth-of-type(1) h2{
+    color: var(--apple-wit);
+}
+
+main section:nth-of-type(1) a{
+    border-color: var(--link-blauw);
+}
+
+/**********/
+/* section 2 */
+/**********/
+main section:nth-of-type(2){
+    background-image:url(../images/iPhone16.jpg);
+}
+
+main section:nth-of-type(2) h2{
+    color: var(--apple-wit);
+}
+
+main section:nth-of-type(2) a{
+    border: solid var(--apple-wit);
+}
+
+main section:nth-of-type(2) a:first-of-type{
+    background-color: var(--apple-wit);
+    color: var(--apple-zwart);
+}
+
+main section:nth-of-type(2) a:last-of-type{
+    color: var(--apple-wit);
+}
+
+main section:nth-of-type(2) a:last-of-type:active{
+    background-color: var(--apple-wit);
+    color: var(--apple-zwart);
+}
+/**********/
+/* section 3 */
+/**********/
+main section:nth-of-type(3){
+    background-image:url(../images/iPadPro.jpg);
+}
+
+main section:nth-of-type(3) h2{
+    color: var(--apple-wit);
+}
+main section:nth-of-type(3) p{
+    color: var(--apple-wit);
+}
+
+/**********/
+/* section 4 */
+/**********/
+main section:nth-of-type(4){
+    background-image: url(../images/airPods.jpg);
+}
+
+main section:nth-of-type(4) h2{
+    color: var(--apple-wit);
+}
+
+
