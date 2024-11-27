@@ -26,10 +26,19 @@ main section{
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center top;
+
+    display: grid;
+    grid-template-columns: 1fr 9em 4.2em 1fr;
+    grid-template-rows: 19em 1fr 1fr 2.3em;
+    column-gap: 1em;
+    row-gap: 1em;
 }
 
 main section h2{
     color: var(--apple-zwart);
+
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
 }
 
 main section a{
@@ -42,10 +51,16 @@ main section a{
 main section a:first-of-type{
     background-color: var(--link-blauw);
     color: var(--apple-wit);
+
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
 }
 
 main section a:last-of-type{
     color: var(--link-blauw);
+
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
 }
 
 main section a:last-of-type:active{
@@ -120,4 +135,48 @@ main section:nth-of-type(4) h2{
     color: var(--apple-wit);
 }
 
+main section:nth-of-type(4) p{
+    color: var(--apple-wit);
+}
+
+/**********/
+/* Carousel*/
+/**********/
+/* Ik heb deze bron gebruikt voor het maken van de Carousel: https://scroll-driven-animations.style/demos/carousel-with-markers/css/#carousel_05 */
+
+
+.tvSeries {
+    display: flex;
+    overflow-x: scroll;
+    /*deze code nakijken*/
+    width: 100%;
+    height: 100%;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
+}
+
+.tvSeries li{
+    background-color: red;
+    /*proberen het te late werken*/
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+[data-component="carousel"] {
+   .tvSeries {
+		scroll-timeline: --carousel x;
+	} 
+	.markers a {
+		animation-timeline: --carousel;
+
+        animation-range: calc((var(--i) - 1) * 25%) calc(var(--i) * 25% + 1px);
+	}
+    overflow: hidden;
+}
+
+[data-component="carousel"]{
+    timeline-scope: --carousel;
+}
 
