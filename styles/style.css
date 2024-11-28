@@ -5,24 +5,6 @@
   box-sizing:border-box;  
 }
 
-
-
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
-}
-
-
-
-
-
 /****************/
 /* JOUW STYLING */
 /****************/
@@ -33,6 +15,14 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
+/* header */
+	--header-h3:#6e6e73;
+
+	--header-zoekbalk:#333336;
+
+
+
+	
 	--apple-zwart:#1d1d1f;
 
 	--apple-wit:#f5f5f7;
@@ -40,11 +30,28 @@
 	--achtergrond-apple:#fafafc;
 	--achtergrond-apple-dark:#161617;
 
-	--header-background: rgba(22, 22, 23, .8);
-	--hamburger-header-background: rgba(22, 22, 23);
+	--header-background-dark: rgba(22, 22, 23, .8);
+	--hamburger-header-background-dark: rgba(22, 22, 23);
+
+	--header-background: rgba(245, 245, 247, .8);
+	--hamburger-header-background: rgba(245, 245, 247);
+
 	--navigatie-tekst: #E8E8ED;
 
 	--link-blauw:#0071e3;
+
+
+
+
+
+
+/* Footer */
+	--footer-background: rgb(245, 245, 247);
+    --footer-border-color: rgba(0, 0, 0, 0.16);
+    --footer-text-color: rgba(0, 0, 0, 0.56);
+    --footer-link-color: rgba(0, 0, 0, 0.72);
+    --footer-directory-title-color: rgba(0, 0, 0, 0.88);
+    --footer-color-hover: #000;
 
    }
 
@@ -53,14 +60,14 @@
 /********************/
 @font-face {
 	font-family: "SanFransisco";
-	font-weight: 400;
+	font-weight: normal;
 	src: url(../fonts/sfprodisplayregular-webfont.woff2) format("woff2");
 	src: url(../fonts/sfprodisplayregular-webfont.woff) format("woff");
 }
 
 @font-face {
 	font-family: "SanFransisco";
-	font-weight: 500;
+	font-weight: bold;
 	src: url(../fonts/sfprodisplaymedium-webfont.woff2) format("woff2");
 	src: url(../fonts/sfprodisplaymedium-webfont.woff) format("woff");
 }
@@ -74,11 +81,15 @@ body{
 	font-family: SanFransisco;
 }
 
-/*main button{
-	border-radius: 2em;
-	padding: 7px 15px;
-} 
-*/
+h1{
+	margin: 0;
+	margin-right: auto;
+	font-size: 1.5em;
+
+	/* iets beters voor dit */
+	margin-left: 1em;
+}
+
 h2{
 	font-family: sanFransisco;
 	/*font-weight: 600;*/
@@ -91,13 +102,23 @@ h2{
 /**********/
 header{
 	background: var(--header-background);	
-	color: var(--navigatie-tekst);
+	color: var(--apple-zwart);
+	/* backdrop-filter:blur(.25em); */
+
 	top: 0;
 	left: 0;
 	right: 0;
-	position: fixed; 
+	position: sticky; 
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1em;
+
 }
 
+
+/* navigatie */
 header nav{
 	position: fixed;
 	top: 0;
@@ -109,11 +130,165 @@ header nav{
 	background-color: var(--hamburger-header-background);
 }
 
+header nav ul{
+	margin-top: 3em;
+}
+
+header nav li{
+	list-style: none;
+	font-size: 1.8em;
+	font-weight: bold;
+	margin-bottom: 0.3em;
+}
+
+header nav a{
+	text-decoration: none;
+	color: var(--apple-zwart);
+}
+
+
+
+/* buttons voor nav */
+header button{
+	appearance:none;
+	border: 0;
+	background-color: transparent;
+}
+
+header button:nth-of-type(1){
+	z-index: 100;
+	position: relative;
+
+	height:2.75em;
+	aspect-ratio:1/1;
+
+	padding:0;
+	border:none;
+
+	order: 4;
+}
+
+header button:nth-of-type(1){
+	display:grid;
+  	place-items:center;
+}
+
+header button:nth-of-type(1) span{
+	grid-row-start:1;
+	grid-column-start:1;
+	width:1.2em;
+	height:.1em;
+	background-color:var(--apple-zwart);
+	transition-duration:.5s;
+}
+
+header button:nth-of-type(1) span:nth-of-type(1){
+	transform:translateY(-.3em);
+}
+
+header button:nth-of-type(1) span:nth-of-type(2){
+	transform:translateY(.3em);
+}
+
+header button:nth-of-type(1)[aria-expanded="true"] span:nth-of-type(1) {
+	transform:rotate(45deg) scalex(1.25);
+  }
+  
+header button:nth-of-type(1)[aria-expanded="true"] span:nth-of-type(2) {
+	transform:rotate(-45deg) scalex(1.25);
+  }
+
+/* zoekbalk */
+header section:nth-of-type(1){
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	translate: 0% -100%;
+	transition: 0.5s;
+	background-color: var(--hamburger-header-background);
+	
+
+	/* vragen of dit oke is want apple doet dit ook */
+	padding:3.4em 3em 0 3em;
+}
+
+header section ul{
+	padding-left: 1em;
+}
+
+header section li{
+	margin-bottom: 0.6em;
+}
+
+header section a{
+	text-decoration: none;
+	color: var(--apple-zwart);
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+header h2{
+	margin-top: 0;
+}
+
+header h3{
+	color: var(--header-h3);
+	font-weight: normal;	
+}
+
+header input{
+	color: var(--header-zoekbalk);
+	font-weight: bold;
+	font-size: 1.8em;
+	border: 0;
+	background-color: var(--header-background);
+}
+
+header section:nth-of-type(2){
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	translate: 0% -100%;
+	transition: 0.5s;
+	background-color: var(--hamburger-header-background);
+	
+
+	/* vragen of dit oke is want apple doet dit ook */
+	padding:3.4em 3em 0 3em;
+}
+
 .open{
 	translate: 0% 0%;
 	transition: 0.5s;
 }
 
+header section:nth-of-type(1).open{
+	translate: 0% 0%;
+	transition: 0.5s;
+}
+
+header section:nth-of-type(2).open{
+	translate: 0% 0%;
+	transition: 0.5s;
+}
+/* header.openWinkel{
+	translate: 0% 0%;
+	transition: 0.5s;
+}
+
+header.openZoek{
+	translate: 0% 0%;
+	transition: 0.5s;
+} */
+
+/* hulp vragen bij deze */
+header input:focus{
+	border: 0;
+}
 
 
 /********/
@@ -134,31 +309,62 @@ img{
 /**********/
 /* FOOTER */
 /**********/
-details {
-	border: 1px solid #aaa;
-	border-radius: 4px;
+footer{
+	background-color: var(--footer-background);
+	color: var(--footer-text-color);
+	font-size: 0.9em;
+}
+
+footer a{
+	text-decoration: none;
+	color: var(--footer-link-color);
+}
+
+footer a:hover{
+	color: var(--footer-color-hover);
+}
+
+footer details li{
+	list-style: none;
+}
+
+footer p a{
+	text-decoration: underline;
+	color: var(--link-blauw);
+}
+
+
+/**********/
+/* FOOTER DETAILS */
+/**********/
+
+footer details {
+	/* border-bottom: 0.1em solid var(--footer-border-color); */
 	padding: 0.5em 0.5em 0;
 }
-  
-summary {
-	font-weight: bold;
-	margin: -0.5em -0.5em 0;
+
+footer details[open] {
 	padding: 0.5em;
 }
-  
-details[open] {
-	padding: 0.5em;
-}
-  
-details[open] summary {
-	border-bottom: 1px solid #aaa;
+
+footer details[open] summary {
+	border-bottom: 0.1em solid var(--footer-border-color);
 	margin-bottom: 0.5em;
 }
+   
+footer summary {
+	border-bottom: 0.1em solid var(--footer-border-color);
+	margin: -0.5em -0.5em 0;
+	padding: 0.5em;
+	color: var(--footer-link-color);
+}
   
 
 
 
 
-/**********/
-/* section 1 */
-/**********/
+
+
+
+
+
