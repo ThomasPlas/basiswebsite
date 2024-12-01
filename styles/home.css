@@ -26,6 +26,7 @@ main section{
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center top;
+    height: 30em;
 
     display: grid; 
     grid-template-columns: 1fr 12.5em 1fr;

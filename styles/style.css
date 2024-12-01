@@ -53,7 +53,18 @@
     --footer-directory-title-color: rgba(0, 0, 0, 0.88);
     --footer-color-hover: #000;
 
-   }
+/* de verschillende iPhones */
+	--finish-white-titanium: #f2f1ed;
+	--finish-natural-titanium: #c2bcb2;
+	--finish-black-titanium: #3c3c3d;
+	--finish-desert-titanium: #bfa48f;
+
+	--inner-schaduw-iPhones: dimgray;
+	--sticky-container: rgb(46,46,48);
+}
+
+
+
 
 /********************/
 /* ALGEMENE STYLING */
@@ -115,6 +126,7 @@ header{
 	align-items: center;
 	gap: 1em;
 
+	z-index: 100;
 }
 
 
@@ -294,9 +306,6 @@ header input:focus{
 /********/
 /* MAIN */
 /********/
-main section{
-	height: 30em;
-}
 
 img{
 	max-width: 100%;
