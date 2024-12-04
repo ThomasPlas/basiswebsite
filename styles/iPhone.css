@@ -1,5 +1,37 @@
+main{
+    display: grid;
+}
+
+/* ********* */
+/* section 1 */
+/* ********* */
+
 main section:nth-of-type(1){
-    background-color: black;
+    background-image:url(../images/iPhone16_head.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: grid;
+    justify-items: center;
+    height: 43em;
+}
+
+@media screen and (min-width: 36em) {
+    main section:nth-of-type(1){
+        background-image:url(../images/iPhone16_head_maat2.jpg);
+        height: 30em;
+    }
+}
+
+@media screen and (min-width: 51em){
+    main section:nth-of-type(1){
+        height: 45em;
+    }
+}
+
+@media screen and (min-width: 68em){
+    main section:nth-of-type(1){
+        height: 53em;
+    }
 }
 
 main section:nth-of-type(1) h2{
@@ -7,10 +39,53 @@ main section:nth-of-type(1) h2{
 }
 
 main section:nth-of-type(1) p{
+    color: var(--tekst-p-pagina2);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+main section:nth-of-type(1) a{
+    color: var(--apple-wit);
+    border: solid var(--link-blauw) 0.1em;
+    background-color: var(--link-blauw);
+    border-radius: 2em;
+	padding: 0.5em 1em;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: normal;
+}
+
+/* ********* */
+/* section 2 */
+/* ********* */
+
+main section:nth-of-type(2){
+    background-color: black;
+    display: grid;
+    justify-items: center;
+}
+
+main section:nth-of-type(2) h2{
     color: var(--apple-wit);
 }
 
-main section:nth-of-type(1) fieldset{
+main section:nth-of-type(2) p{
+    color: var(--apple-wit);
+    font-size: .8em;
+}
+
+main section:nth-of-type(2) img{
+    width: 100%;
+    opacity:0;
+	transition:.5s;
+}
+
+main section:nth-of-type(2) picture{
+    grid-row: 1/1;
+    grid-column: 1/1;
+}
+
+main section:nth-of-type(2) fieldset{
     display: flex;
     justify-content: space-around;
     appearance: none;
@@ -21,7 +96,7 @@ main section:nth-of-type(1) fieldset{
     border: none;
 }
 
-main section:nth-of-type(1) input[type="radio"]{
+main section:nth-of-type(2) input[type="radio"]{
     appearance: none;
     height: 2.2em;
     aspect-ratio: 1/1;
@@ -29,13 +104,13 @@ main section:nth-of-type(1) input[type="radio"]{
     box-shadow: inset 0 -.17em .3em .01em var(--inner-schaduw-iPhones); 
 }
 
-main section:nth-of-type(1) input[type="radio"]:checked{
+main section:nth-of-type(2) input[type="radio"]:checked{
     border: none;
     outline: .15em solid var(--apple-wit);
 }
 
-
-main section:nth-of-type(1):has([value="alleKleuren"]:checked)  img{
+/* oude code van het wisselen van de foto's */
+/* main section:nth-of-type(1):has([value="alleKleuren"]:checked)  img{
     content: url("../images/all_colors.jpg");
 }
 main section:nth-of-type(1):has([value="zwartTitanium"]:checked)  img{
@@ -49,72 +124,309 @@ main section:nth-of-type(1):has([value="naturelTitanium"]:checked)  img{
 }
 main section:nth-of-type(1):has([value="desertTitanium"]:checked)  img{
     content: url("../images/desert_titanium.jpg");
-}
+} */
 
 
-main section:nth-of-type(1) div:nth-of-type(1) input[type="radio"]{
+
+main section:nth-of-type(2) div:nth-of-type(1) input[type="radio"]{
     background-color: var(--finish-white-titanium);
 }
-main section:nth-of-type(1) div:nth-of-type(2) input[type="radio"]{
+main section:nth-of-type(2) div:nth-of-type(2) input[type="radio"]{
     background-color: var(--finish-black-titanium);
 }    
-main section:nth-of-type(1) div:nth-of-type(3) input[type="radio"]{
+main section:nth-of-type(2) div:nth-of-type(3) input[type="radio"]{
     background-color: var(--finish-white-titanium);
 }
-main section:nth-of-type(1) div:nth-of-type(4) input[type="radio"]{
+main section:nth-of-type(2) div:nth-of-type(4) input[type="radio"]{
     background-color: var(--finish-natural-titanium);
 }
-main section:nth-of-type(1) div:nth-of-type(5) input[type="radio"]{
+main section:nth-of-type(2) div:nth-of-type(5) input[type="radio"]{
     background-color: var(--finish-desert-titanium);
 }
 
+main section:nth-of-type(2):has( [value="alleKleuren"]:checked ) img[alt="foto van alle kleuren van de iPhone16"],
+main section:nth-of-type(2):has( [value="zwartTitanium"]:checked ) img[alt="foto van alle kleuren van de iPhone16 in de kleur zwart titanium"],
+main section:nth-of-type(2):has( [value="witTitanium"]:checked ) img[alt="foto van alle kleuren van de iPhone16 in de kleur wit titanium"],
+main section:nth-of-type(2):has( [value="naturelTitanium"]:checked ) img[alt="foto van alle kleuren van de iPhone16 in de kleur naturel titanium"],
+main section:nth-of-type(2):has( [value="desertTitanium"]:checked ) img[alt="foto van alle kleuren van de iPhone16 in de kleur desert titanium"] {
+	opacity:1;
+}
+
+/* section:nth-of-type(2) div{
+    top: 0;
+    grid-area: 1/1/1/1;
+    position: sticky;
+    display: grid;
+    justify-items: center;
+    align-items: start;
+} */
+
+
+
 /* alles hierboven laten checken */
+
+/* ********* */
+/* section 3 */
+/* ********* */
+
+main section:nth-of-type(3){
+    background: linear-gradient(var(--background-color-pagina2)40%,  var(--background-color-gradient)70%, var(--background-color-pagina2)100%);
+    display: grid;
+    grid-template-columns: 3em repeat(2, 1fr) 5em;
+    /* grid-template-rows: repeat(7, 1fr); */
+    row-gap: 2em;
+}
+
+main section:nth-of-type(3) h2{
+    color: var(--header-h2-pagina2);
+    font-size: 2.4em;
+    text-align: center;
+    justify-self: center;
+    width: 7em;
+    z-index: 2;
+    grid-area: 1 / 2 / 2 / 4;
+}
+
+@media (prefers-reduced-motion: no-preference){
+    main section:nth-of-type(3) h2 strong{
+        color: var(--header-h2-pagina2);
+        text-shadow: none;
+        animation: veranderTitel linear forwards;
+        animation-timeline: view();
+        animation-range: contain;
+    }
+    
+    @keyframes veranderTitel {
+        to{
+            color: var(--header-h2-glow);
+            text-shadow: 0 0 .2em var(--header-h2-glow-schaduw), 0 0 .5em var(--header-h2-glow-schaduw), 0 0 1em var(--header-h2-glow-schaduw), 0 0 1.2em var(--header-h2-glow-schaduw-2), 0 0 1.6em var(--header-h2-glow-schaduw-2), 0 0 2em var(--header-h2-glow-schaduw-2), 0 0 3em var(--header-h2-glow-schaduw-2), 0 0 4em var(--header-h2-glow-schaduw-2);
+        }
+    }
+}
+
+main section:nth-of-type(3) picture{
+    max-width: 100%;
+    grid-area: 2 / 1 / 3 / 5;
+}
+
+main section:nth-of-type(3) img{
+    max-width: 100%;
+}
+
+main section:nth-of-type(3) p{
+    color: var(--tekst-p-pagina2);
+    font-weight: bold;
+    font-size: 1.2em;
+    max-width: 90%;
+    justify-self: center;
+}
+
+main section:nth-of-type(3) p:nth-of-type(1){
+    grid-area: 3 / 2 / 4 / 4;
+}
+main section:nth-of-type(3) p:nth-of-type(2){
+    grid-area: 4 / 2 / 5 / 4;
+}
+main section:nth-of-type(3) p:nth-of-type(3){
+    grid-area: 7 / 2 / 8 / 4;
+}
+main section:nth-of-type(3) p:nth-of-type(4){
+    grid-area: 8 / 2 / 9 / 4;
+}
+
+@media screen and (min-width: 28em){
+    main section:nth-of-type(3) p{
+        max-width: 70%;
+    }
+}
+
+@media screen and (min-width: 62em) {
+    main section:nth-of-type(3) p:nth-of-type(1){
+        grid-area: 3 / 2 / 5 / 3;
+    }
+    main section:nth-of-type(3) p:nth-of-type(2){
+        grid-area: 3 / 3 / 5 / 4;
+    }
+    main section:nth-of-type(3) p:nth-of-type(3){
+        grid-area: 7 / 2 / 9 / 3;
+    }
+    main section:nth-of-type(3) p:nth-of-type(4){
+        grid-area: 7 / 3 / 9 / 4;
+    }
+}
+
+main section:nth-of-type(3) p strong{
+    color: var(--tekst-p-strong);
+}
+
+
+/* main section:nth-of-type(3){
+    width: 100vw;
+} */
+
+
+
+main section:nth-of-type(3) ul{
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 1em;
+
+    padding: 0;
+
+    overflow-x: auto;
+
+    scroll-snap-type: inline mandatory;
+    grid-area: 5 / 1 / 6 / 5; 
+}
+
+main section:nth-of-type(3) ul > *{
+    scroll-snap-align: center;
+}
+
+main section:nth-of-type(3) li{
+    justify-items: center;
+}
+
+main section:nth-of-type(3) li p{
+    background: linear-gradient(90deg, var(--header-h2-glow-schaduw),  var(--header-h2-glow-schaduw-2));
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    width: 20em;
+    font-size: .9em;
+}
+
+main section:nth-of-type(3) li img{
+    border-radius: 2em;
+    width: 20em;
+    max-width: none;
+}
+
+main section:nth-of-type(3) button{
+    width: 2.5em;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    border:none;
+    background-color: var(--button-carousel);
+    display:grid;
+    place-items:center;
+    opacity: 0.8;
+    grid-area: 6 / 3 / 7 / 4;
+}
+
+main section:nth-of-type(3) button:hover{
+    opacity: 1;
+}
+
+main section:nth-of-type(3) button span{
+    width:.9em;
+	height:.25em;  
+    background-color: var(--apple-wit);
+    border-radius: .2em;
+}
+
+main section:nth-of-type(3) button span:nth-of-type(1){
+    rotate: -45deg;
+    translate: 0 .36em;
+}
+main section:nth-of-type(3) button span:nth-of-type(2){
+    rotate: 45deg;  
+    translate: 0 -.36em;
+}
+
+main section:nth-of-type(3) button:nth-of-type(2) span:nth-of-type(1){
+    rotate: 45deg;
+    translate: 0 .36em;
+}
+main section:nth-of-type(3) button:nth-of-type(2) span:nth-of-type(2){
+    rotate: -45deg;  
+    translate: 0 -.36em;
+}
+
+
+
 
 
 /* ********* */
 /* scroll based animation */
 /* ********* */
 
-/* dit is alleen voor het testen */
-section:nth-of-type(2){
-    height:40em;
 
-}
 
-section:nth-of-type(3){
+main section:nth-of-type(4){
     display: grid;
     justify-items: center;
     background-color: black;
 }
 
-section:nth-of-type(3) img{
+main section:nth-of-type(4) img{
     height: 30em;
 }
 
-section:nth-of-type(3) img:nth-of-type(1){
+main section:nth-of-type(4) img:nth-of-type(1){
+    height: 100vh;
+    width: auto;
+    justify-self: center;
+    overflow:hidden;
+}
+
+main section:nth-of-type(4) img:nth-of-type(1){
     z-index: 1;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    
+    position: sticky;
+    top: 0;
 }
 
-section:nth-of-type(3) img:nth-of-type(2), section:nth-of-type(3) img:nth-of-type(3){
+main section:nth-of-type(4) h2{
+    z-index: 2;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    color: var(--apple-wit);
+    
+    text-align: center;
+    align-self: center;
+    hyphens: auto;
+    hyphenate-limit-chars: 20;
+}
+
+main section:nth-of-type(4) img:nth-of-type(2), main section:nth-of-type(3) img:nth-of-type(3){
     min-width: 0; 
     max-width: none;
     z-index: 2;
 
     grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    grid-row: 2 / 3;
+    align-self: end;
 }
 
 @media (prefers-reduced-motion: no-preference){
-    section:nth-of-type(3) img:nth-of-type(1){
-        scale: 1; 
-        animation: verkleinFoto linear forwards;
+    main section:nth-of-type(4) h2{
+        opacity: 1; 
+        animation: vervaagTekst linear forwards;
         animation-timeline: view();
         animation-range: contain;
     }
+    
+    @keyframes vervaagTekst {
+        to{
+            opacity: 0; 
+        }
+    }
+}
 
-
+@media (prefers-reduced-motion: no-preference){
+    main section:nth-of-type(4) img:nth-of-type(1){
+        scale: 1; 
+        animation: verkleinFoto linear forwards;
+        animation-timeline: view(20em);
+        animation-range: contain;
+        /* animation-range-start: 1em ;
+        animation-range-end: 1em; */
+    }
 
     @keyframes verkleinFoto {
         to{
@@ -124,8 +436,8 @@ section:nth-of-type(3) img:nth-of-type(2), section:nth-of-type(3) img:nth-of-typ
 }
 
 @media (prefers-reduced-motion: no-preference){
-    section:nth-of-type(3) img:nth-of-type(2){
-        opacity: 0; scale: 1.8;
+    main section:nth-of-type(4) img:nth-of-type(2){
+        opacity: 0; scale: 2;
         animation: verscheinFoto linear forwards;
         animation-timeline: view();
         animation-range: contain ;
@@ -139,8 +451,8 @@ section:nth-of-type(3) img:nth-of-type(2), section:nth-of-type(3) img:nth-of-typ
 }
 
 @media (prefers-reduced-motion: no-preference){
-    section:nth-of-type(3) img:nth-of-type(3){
-        opacity: 0; scale: 1.8; 
+    main section:nth-of-type(4) img:nth-of-type(3){
+        opacity: 0; scale: 2; 
         animation: verscheinTelefoon linear forwards;
         animation-timeline: view();
         animation-range: contain;
@@ -151,4 +463,86 @@ section:nth-of-type(3) img:nth-of-type(2), section:nth-of-type(3) img:nth-of-typ
             opacity: 1; scale: .63;
         }
     }
+}
+
+
+/* ********* */
+/* details */
+/* ********* */
+
+main section:nth-of-type(6) div{
+    width: 90%;
+    background-color: black;
+    color: var(--apple-wit);
+    justify-self: center;
+    border-radius: 2em;
+    padding: 4em 1.3em;
+
+}
+
+main div details:nth-of-type(2),details:nth-of-type(3){
+    border-top: .05em solid grey;
+}
+
+main div details summary{
+    padding: 1em 0;
+}
+
+/* vragen naar deze twee hieronder */
+main div details:nth-of-type(2){
+    display: grid;
+}
+main div details img{
+    justify-self: center;
+}
+
+main div details:nth-of-type(1) img{
+    width: 85%;
+}
+
+main div img{
+    width: 50%;
+}
+
+
+
+/* main section:nth-of-type(7){
+    width: 100vw;
+} */
+
+main section:nth-of-type(7) ul{
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 1em;
+
+    padding: 0;
+
+    overflow-x: auto;
+
+    scroll-snap-type: inline mandatory;
+}
+
+main section:nth-of-type(7) ul > *{
+    scroll-snap-align: center;
+}
+
+main section:nth-of-type(7) li{
+    /* width: 20em; */
+    display: grid;
+    justify-items: center;
+}
+
+main section:nth-of-type(7) li p{
+    background: linear-gradient(90deg, var(--header-h2-glow-schaduw),  var(--header-h2-glow-schaduw-2));
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    width: 20em;
+}
+
+main section:nth-of-type(7) li img{
+    border-radius: 2em;
+    width: 20em;
+
 }

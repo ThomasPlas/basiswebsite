@@ -20,9 +20,6 @@
 
 	--header-zoekbalk:#333336;
 
-
-
-	
 	--apple-zwart:#1d1d1f;
 
 	--apple-wit:#f5f5f7;
@@ -61,11 +58,20 @@
 
 	--inner-schaduw-iPhones: dimgray;
 	--sticky-container: rgb(46,46,48);
+
+
+/* pagina 2 */
+	--background-color-pagina2: rgb(0, 0, 0);
+	--background-color-gradient: rgb(31,23,19);
+	--header-h2-pagina2: rgb(200, 191, 187);
+	--header-h2-glow: rgb(255, 250, 245);
+	--header-h2-glow-schaduw: rgb(204, 172, 125);
+	--header-h2-glow-schaduw-2: rgb(176,114,81);
+	--tekst-p-pagina2: #86868b;
+	--tekst-p-strong: rgb(255, 255, 255);
+	--button-carousel: rgb(53,52,54);
+
 }
-
-
-
-
 /********************/
 /* ALGEMENE STYLING */
 /********************/
@@ -307,9 +313,9 @@ header input:focus{
 /* MAIN */
 /********/
 
-img{
+/* img{
 	max-width: 100%;
-}
+} */
 
 
 
