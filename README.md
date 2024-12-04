@@ -57,9 +57,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
-  In de screen reader ga je langs de footnotes maar dit zijn alleen nummers dus dit is erg onduidelijk
-  Er word gebruik gemaakt van h1,h2 tot h6 maar dit lijkt mij een beetje veel
-  Door de interface heen gaan ging best goed met de screenreader
+  - In de screen reader ga je langs de footnotes maar dit zijn alleen nummers dus dit is erg onduidelijk
+  - Er word gebruik gemaakt van h1,h2 tot h6 maar dit lijkt mij een beetje veel
+  - Door de interface heen gaan ging best goed met de screenreader
+  - 
 
 </details>
 
@@ -116,10 +117,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - 1. ik kan gewoon met een converter de pixels omzetten naar em's
+  - 2. als een achtergrond alleen maar voor mooi is en niet specifiek betekenisvol is kan je deze ook als background image gebruiken omdat de screenreader dan niet overheen leest
+  - 3. ik mag minder kleuren gebruiken in mijn site dan dat apple gebruikt omdat apple er wel heel veel heeft
+
 
 </details>
 
@@ -141,18 +142,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   | student 1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  |                | en dit             | en ik dit    | en dan ik dat    |
+  | ik heb een bug wanneer ik een background blur maak dat de aanpassingen voor het hamburgermenu ongedaan| dit als er tijd is | nog een punt | dit wil ik zeker |
+  | ik wil een beetje hulp met de carousel die alleen met css wordt gedaan op de websit van bramus            | ...                | ...          | ...              |
+  | waar kan ik goeie info vinden voor scroll based animations            | ---                | ---          | ---              |
+  | ---            | ---                | ---          | ---              |
+  | ---            | ---                | ---          | ---              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - als feebback kreeg ik om voor mijn javascript bug beter hier later naar kunnen kijken,
+  - Ik moest mij eerst focussen op mijn tweede pagina
+  - voor scrollbases animatie kon ik kijken naar (https://scroll-driven-animations.style/). 
+  - voor de carousel kreeg ik een voorbeeldje van jesse:(https://codepen.io/OvenMagnetron/pen/PoMoLOM).
 - ...
+ 
 
 </details>
 
