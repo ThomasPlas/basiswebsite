@@ -77,22 +77,27 @@ main section:nth-of-type(2){
 
 main section:nth-of-type(2) h2{
     color: var(--apple-wit);
+    text-align: center;
 }
 
 main section:nth-of-type(2) p{
     color: var(--apple-wit);
     font-size: .8em;
+    grid-row: 3/4;
+    grid-column: 1/2;
+    opacity: 0;
+    transition:.5s;
 }
 
 main section:nth-of-type(2) img{
     width: 100%;
-    opacity:0;
+    opacity: 0;
 	transition:.5s;
 }
 
 main section:nth-of-type(2) picture{
-    grid-row: 1/1;
-    grid-column: 1/1;
+    grid-row: 1/2;
+    grid-column: 1/2;
 }
 
 main section:nth-of-type(2) fieldset{
@@ -154,11 +159,20 @@ main section:nth-of-type(2) div:nth-of-type(5) input[type="radio"]{
     background-color: var(--finish-desert-titanium);
 }
 
+/* veranderen van foto's */
 main section:nth-of-type(2):has( [value="alleKleuren"]:checked ) img[alt="foto van alle kleuren van de iPhone16"],
 main section:nth-of-type(2):has( [value="zwartTitanium"]:checked ) img[alt="foto van alle kleuren van de iPhone16 in de kleur zwart titanium"],
 main section:nth-of-type(2):has( [value="witTitanium"]:checked ) img[alt="foto van alle kleuren van de iPhone16 in de kleur wit titanium"],
 main section:nth-of-type(2):has( [value="naturelTitanium"]:checked ) img[alt="foto van alle kleuren van de iPhone16 in de kleur naturel titanium"],
 main section:nth-of-type(2):has( [value="desertTitanium"]:checked ) img[alt="foto van alle kleuren van de iPhone16 in de kleur desert titanium"] {
+	opacity:1;
+}
+
+main section:nth-of-type(2):has( [value="alleKleuren"]:checked ) p:nth-of-type(1),
+main section:nth-of-type(2):has( [value="zwartTitanium"]:checked ) p:nth-of-type(2),
+main section:nth-of-type(2):has( [value="witTitanium"]:checked ) p:nth-of-type(3),
+main section:nth-of-type(2):has( [value="naturelTitanium"]:checked ) p:nth-of-type(4),
+main section:nth-of-type(2):has( [value="desertTitanium"]:checked ) p:nth-of-type(5) {
 	opacity:1;
 }
 
@@ -274,7 +288,10 @@ main section:nth-of-type(3) p strong{
     width: 100vw;
 } */
 
-
+main section:nth-of-type(3)::-webkit-scrollbar {
+    background: transparent; 
+    display: none;
+}
 
 main section:nth-of-type(3) ul{
     list-style: none;
@@ -312,6 +329,10 @@ main section:nth-of-type(3) li img{
     width: 20em;
     max-width: none;
 }
+
+
+
+/* buttons voor de carousel */
 
 main section:nth-of-type(3) button{
     width: 2.5em;
@@ -369,6 +390,7 @@ main section:nth-of-type(4){
     justify-items: center;
     background-color: black;
     height: 80em;
+    overflow: hidden;
 }
 
 main section:nth-of-type(4) img{
@@ -449,7 +471,7 @@ main section:nth-of-type(4) img:nth-of-type(2), main section:nth-of-type(4) img:
 
 @media (prefers-reduced-motion: no-preference){
     main section:nth-of-type(4) img:nth-of-type(2){
-        opacity: .5; scale: 3;
+        opacity: 0; scale: 3;
         animation: verscheinFoto linear forwards;
         animation-timeline: view();
         animation-range: contain ;
@@ -464,7 +486,7 @@ main section:nth-of-type(4) img:nth-of-type(2), main section:nth-of-type(4) img:
 
 @media (prefers-reduced-motion: no-preference){
     main section:nth-of-type(4) img:nth-of-type(3){
-        opacity: .5; scale: 3; 
+        opacity: 0; scale: 3; 
         animation: verscheinTelefoon linear forwards;
         animation-timeline: view();
         animation-range: contain;
