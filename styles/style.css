@@ -15,32 +15,21 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-/* header */
-	--header-h3:#6e6e73;
-
-	--header-zoekbalk:#333336;
-
 	--apple-zwart:#1d1d1f;
-
 	--apple-wit:#f5f5f7;
 
 	--achtergrond-apple:#fafafc;
 	--achtergrond-apple-dark:#161617;
 
-	--header-background-dark: rgba(22, 22, 23, .8);
-	--hamburger-header-background-dark: rgba(22, 22, 23);
-
-	--header-background: rgba(245, 245, 247, .8);
-	--hamburger-header-background: rgba(245, 245, 247);
-
-	--navigatie-tekst: #E8E8ED;
-
 	--link-blauw:#0071e3;
 
-
-
-
-
+/* header */
+	--header-h3:#6e6e73;
+	--header-zoekbalk:#333336;
+	--header-background-dark: rgba(22, 22, 23, .8);
+	--hamburger-header-background-dark: rgba(22, 22, 23);
+	--header-background: rgba(245, 245, 247, .8);
+	--hamburger-header-background: rgba(245, 245, 247);
 
 /* Footer */
 	--footer-background: rgb(245, 245, 247);
@@ -70,8 +59,23 @@
 	--tekst-p-pagina2: #86868b;
 	--tekst-p-strong: rgb(255, 255, 255);
 	--button-carousel: rgb(53,52,54);
+}
+
+/*********************/
+/* DARK MODE CUSTOM PROPERTIES */
+/*********************/
+@media (prefers-color-scheme: dark){
+	:Root{
+		--apple-zwart:#1d1d1f;
+		--apple-wit:#f5f5f7;
+
+		--achtergrond-apple:#161617;
+	}
 
 }
+
+
+
 /********************/
 /* ALGEMENE STYLING */
 /********************/
@@ -104,7 +108,6 @@ h1{
 	font-size: 1.5em;
 
 	/* iets beters voor dit */
-	margin-left: 1em;
 }
 
 h2{
@@ -133,6 +136,10 @@ header{
 	gap: 1em;
 
 	z-index: 100;
+
+
+	padding: 0 1em;
+
 }
 
 
@@ -148,7 +155,7 @@ header nav{
 	background-color: var(--hamburger-header-background);
 }
 
-header nav ul{
+header nav > ul{
 	margin-top: 3em;
 }
 
@@ -293,6 +300,8 @@ header section:nth-of-type(2).open{
 	translate: 0% 0%;
 	transition: 0.5s;
 }
+
+
 /* header.openWinkel{
 	translate: 0% 0%;
 	transition: 0.5s;
@@ -307,6 +316,134 @@ header.openZoek{
 header input:focus{
 	border: 0;
 }
+
+header nav li:nth-of-type(1) section{
+	display: none;
+}
+
+
+
+
+@media screen and (min-width: 68em){
+    header{	
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2.4em;
+	}
+	
+	h1{
+		margin-right: 0;
+	}
+
+	header nav{
+		position: static;
+		translate: unset;
+		background: none;
+		padding: 0;
+		/* translate: 0% 0%; */
+		/* background-color: var(--hamburger-header-background); */
+	}
+	header nav > ul{
+		margin-top: 0;
+		display: flex;
+		align-content: center;
+		margin: 0;
+		padding: 0;
+		gap: 2.4em;
+	}
+	
+	header nav li{
+		font-size: 0.8em;
+		font-weight: normal;
+		margin-bottom: 0;
+	}
+	
+	header nav a{
+		text-decoration: none;
+	}
+	
+	header button:nth-of-type(1){
+		display: none; 		
+	}
+	
+	header section{
+		z-index: -1;		
+	}
+
+	header section:nth-of-type(1), header section:nth-of-type(2){
+		bottom: 20em;
+	}
+
+
+	/* header naviagtie wanneer dektop */
+	header nav li:nth-of-type(1) section.open{
+		translate: 0% 0%;
+		transition: 0.5s;
+	}
+
+	header nav li:nth-of-type(1) section{
+		bottom: 20em;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		translate: 0% -100%;
+		transition: 0.5s;
+		background-color: var(--hamburger-header-background);
+		display: grid;
+		grid-template-columns: 1fr 30em repeat(2, 20em) 2fr;
+		grid-template-rows: 4em 5em 1fr;
+		column-gap: 1em;
+		padding: 0;
+	}
+
+	header nav li:nth-of-type(1) section h2{
+		grid-row: 2/3;
+		font-size: 1em;
+		font-weight: normal;
+		color: var(--header-h3);
+		align-self: end;
+	}
+	header nav li:nth-of-type(1) section h2:nth-of-type(1){
+		grid-column: 2/3;
+	}
+	header nav li:nth-of-type(1) section h2:nth-of-type(2){
+		grid-column: 3/4;
+	}
+	header nav li:nth-of-type(1) section h2:nth-of-type(3){
+		grid-column: 4/5;
+	}
+
+	header nav li:nth-of-type(1) section ul{
+		grid-row: 3/4;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	header nav li:nth-of-type(1) section ul:nth-of-type(1){
+		grid-column: 2/3;
+		font-size: 1.8em;
+	}
+	header nav li:nth-of-type(1) section ul:nth-of-type(2){
+		grid-column: 3/4;
+	}
+	header nav li:nth-of-type(1) section ul:nth-of-type(3){
+		grid-column: 4/5;
+	}
+
+	header nav li:nth-of-type(1) section li{
+		font-size: 1em;
+		font-weight: bold;
+		margin-bottom: 0.6em;
+	}
+
+
+
+}
+
+
+
 
 
 /********/

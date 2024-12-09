@@ -8,9 +8,11 @@ let navigatie = document.querySelector("nav");
 let zoekenKnop = document.querySelector("header > button:nth-of-type(2)")
 let winkelMandjeKnop = document.querySelector("header > button:nth-of-type(3)");
 
-let zoekScherm = document.querySelector("header section:nth-of-type(1)")
-let winkelMandje = document.querySelector("header section:nth-of-type(2)")
+let zoekScherm = document.querySelector("header > section:nth-of-type(1)");
+let winkelMandje = document.querySelector("header > section:nth-of-type(2)");
 
+let storeHoover = document.querySelector("header nav li:nth-of-type(1)")
+let storeNavigatie = document.querySelector("header nav li:nth-of-type(1) section");
 
 
 // openen van menu
@@ -20,7 +22,6 @@ menu.addEventListener("click", function() {
 
     console.log("menu clicked");
     if (!zoekSchermOpen && !winkelMandjeOpen) {
-        // Only toggle if both are closed
         navigatie.classList.toggle("open");
     }
     zoekScherm.classList.remove("open");
@@ -66,3 +67,14 @@ function menuButtonClick() {
     menuButton.ariaExpanded = "true"
   }
 }
+
+
+
+
+storeHoover.addEventListener("mouseover", showStoreNaviagtie);
+
+function showStoreNaviagtie(){
+    console.log("hier is de store navigatie")
+    storeNavigatie.classList.toggle("open")
+}
+
