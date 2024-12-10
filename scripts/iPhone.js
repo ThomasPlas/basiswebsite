@@ -1,3 +1,7 @@
+//*********************** */
+// deze code was niet meer nodig vanwege de "has" die ik heb gebruikt.
+//*********************** */
+
 // const iPhoneKleuren = document.querySelectorAll('input[name="iPhoneKleuren"]');
 // const welkeTelefoon = document.querySelector('main section:nth-of-type(1) p:nth-of-type(2)');
 
@@ -24,4 +28,35 @@
 //     });
 // });
 
-// deze code was niet meer nodig vanwege de has die ik heb gebruikt.
+
+//*********************** */
+// code voor de carousels
+//*********************** */
+
+const carousel = document.querySelector("main section:nth-of-type(3) ul");
+const carouselFotos = Array.from(carousel.children);
+
+let buttonTerug = document.querySelector("main section:nth-of-type(3) button:nth-of-type(1)");
+let buttonVooruit = document.querySelector("main section:nth-of-type(3) button:nth-of-type(2)");
+let currentIndex = 0;
+
+function scrollToItem(index) {
+    const huidigeFoto = carouselFotos[index];
+    console.log(huidigeFoto)
+    huidigeFoto.scrollIntoView({ behavior: "smooth", inline: "center" });
+}
+
+buttonTerug.addEventListener("click", () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        scrollToItem(currentIndex);
+    }
+});
+
+buttonVooruit.addEventListener("click", () => {
+    if (currentIndex < 3) {
+        currentIndex++;
+        scrollToItem(currentIndex);
+    }
+});
+

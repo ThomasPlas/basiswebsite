@@ -212,7 +212,7 @@ main section:nth-of-type(4) div{
     main section:nth-of-type(4){
         grid-area: 3 / 1 / 4 / 2;
     }
-    main > div{
+    main > ul{
         grid-area: 4 / 1 / 5 / 3;
     }
 }
@@ -221,11 +221,11 @@ main section:nth-of-type(4) div{
 /* Carousel*/
 /**********/
 
-main > div{
-    width: 100vw;
+main > ul{
+    width: 100%;
 }
 
-main > div ul{
+main > ul{
     list-style: none;
     display: flex;
     padding: 0;
@@ -234,35 +234,68 @@ main > div ul{
     scroll-snap-type: inline mandatory;
 }
 
-main > div ul > *{
+main > ul > *{
     scroll-snap-align: center;
 }
 
-main > div li{
+main > ul li{
     width: 60%;
     height: 28em;
     display: grid;
+    grid-template-rows: .2em 2em 16em 1em 4em 2em 0em;
+    gap: .4em;
     justify-items: center;
     background-size: cover;
 }
 
-main > div li:nth-of-type(1){
+main > ul li:nth-of-type(1){
     background-image:url(../images/f1Poster.jpg) ;
 }
-main > div li:nth-of-type(2){
+main > ul li:nth-of-type(2){
     background-image:url(../images/tedLassoPoster.jpg) ;
 }
-main > div li:nth-of-type(3){
+main > ul li:nth-of-type(3){
     background-image:url(../images/shrinkingPoster.jpg) ;
 }
-main > div li:nth-of-type(4){
+main > ul li:nth-of-type(4){
     background-image:url(../images/wolfsPoster.jpg) ;
 }
 
-main > div li img:nth-of-type(1){
+main > ul li img:nth-of-type(1){
     width: 4em;
+    grid-row: 2/3;
 }
 
-main > div li img:nth-of-type(2){
+main > ul li img:nth-of-type(2){
     width: 16em;
+    grid-row: 3/4;
 }
+
+main > ul li p{
+    color: var(--apple-wit);
+    text-align: center;
+    margin: 0;
+}
+
+main > ul li p:nth-of-type(1){
+    grid-row: 4/5;
+    font-weight: bold;
+}
+
+main > ul li p:nth-of-type(2){
+    grid-row: 5/6;
+    font-size: .9em;
+}
+
+main > ul li a{
+    grid-row: 6/7;
+    background-color: var(--apple-wit);
+    border-radius: 2em;
+	padding: 0.5em 1em;
+    height: 2.5em;
+    
+    text-decoration: none;
+    color: var(--apple-zwart);
+    font-size: 0.9em;
+}
+

@@ -71,7 +71,7 @@ function menuButtonClick() {
 
 
 
-storeHoover.addEventListener("mouseover", showStoreNaviagtie);
+storeHoover.addEventListener("click", showStoreNaviagtie);
 
 function showStoreNaviagtie(){
     console.log("hier is de store navigatie")

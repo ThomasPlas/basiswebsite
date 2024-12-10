@@ -19,15 +19,13 @@
 	--apple-wit:#f5f5f7;
 
 	--achtergrond-apple:#fafafc;
-	--achtergrond-apple-dark:#161617;
 
 	--link-blauw:#0071e3;
 
 /* header */
+	--header-tekst:#1d1d1f;
 	--header-h3:#6e6e73;
 	--header-zoekbalk:#333336;
-	--header-background-dark: rgba(22, 22, 23, .8);
-	--hamburger-header-background-dark: rgba(22, 22, 23);
 	--header-background: rgba(245, 245, 247, .8);
 	--hamburger-header-background: rgba(245, 245, 247);
 
@@ -47,7 +45,6 @@
 
 	--inner-schaduw-iPhones: dimgray;
 	--sticky-container: rgb(46,46,48);
-
 
 /* pagina 2 */
 	--background-color-pagina2: rgb(0, 0, 0);
@@ -71,9 +68,23 @@
 
 		--achtergrond-apple:#161617;
 	
+	/* header */
+		--header-h3:#c4c4c4;
+		--header-zoekbalk:#f5f5f7;;
+		--header-background: rgba(22, 22, 23, .95);
+		--hamburger-header-background: rgba(22, 22, 23);
+		--header-tekst:#f5f5f7;
 
-		
+	/* Footer */
+		--footer-background: rgb(22, 22, 23);
+		--footer-border-color: rgba(255, 255, 255, 0.40);
+		--footer-text-color: rgba(255, 255, 255, 0.70);
+		--footer-link-color: rgba(255, 255, 255, 0.80);
+		--footer-directory-title-color: rgba(255, 255, 255, 0.95);
+		--footer-color-hover: #ffffff;
+
 	}
+
 }
 
 /*********/
@@ -104,6 +115,22 @@
 /********************/
 /* ALGEMENE STYLING */
 /********************/
+.visually-hidden { 
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); 
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%); 
+    white-space: nowrap; 
+}
+/* bron: https://stackoverflow.com/questions/65257333/svg-inside-h1-tag */
+
+
 body {
 	margin: 0; 
 	padding: 0;
@@ -117,8 +144,14 @@ h1{
 	margin: 0;
 	margin-right: auto;
 	font-size: 1.5em;
+	
+	/* iets beters voor dit want dit moet een svg worden en dan een h1 met style hidden */
+}
 
-	/* iets beters voor dit */
+h1 svg{
+	fill: var(--header-tekst);
+	height: .8em;
+	aspect-ratio: 1/1;
 }
 
 h2{
@@ -133,24 +166,18 @@ h2{
 /**********/
 header{
 	background: var(--header-background);	
-	color: var(--apple-zwart);
+	color: var(--header-tekst);
 	/* backdrop-filter:blur(.25em); */
-
 	top: 0;
 	left: 0;
 	right: 0;
 	position: sticky; 
-
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	gap: 1em;
-
 	z-index: 100;
-
-
 	padding: 0 1em;
-
 }
 
 
@@ -179,16 +206,15 @@ header nav li{
 
 header nav a{
 	text-decoration: none;
-	color: var(--apple-zwart);
+	color: var(--header-tekst);
 }
-
-
 
 /* buttons voor nav */
 header button{
 	appearance:none;
 	border: 0;
 	background-color: transparent;
+	fill: var(--header-tekst);
 }
 
 header button:nth-of-type(1){
@@ -209,12 +235,17 @@ header button:nth-of-type(1){
   	place-items:center;
 }
 
+header button svg{
+	height: 3em;
+	width: 1.3em;
+}
+
 header button:nth-of-type(1) span{
 	grid-row-start:1;
 	grid-column-start:1;
 	width:1.2em;
 	height:.1em;
-	background-color:var(--apple-zwart);
+	background-color: var(--header-tekst);
 	transition-duration:.5s;
 }
 
@@ -260,7 +291,7 @@ header section li{
 
 header section a{
 	text-decoration: none;
-	color: var(--apple-zwart);
+	color: var(--header-tekst);
 	font-weight: bold;
 	font-size: 1.1em;
 }
@@ -331,9 +362,6 @@ header input:focus{
 header nav li:nth-of-type(1) section{
 	display: none;
 }
-
-
-
 
 @media screen and (min-width: 68em){
     header{	
@@ -448,9 +476,6 @@ header nav li:nth-of-type(1) section{
 		font-weight: bold;
 		margin-bottom: 0.6em;
 	}
-
-
-
 }
 
 
@@ -496,10 +521,7 @@ footer p a{
 	color: var(--link-blauw);
 }
 
-
-/**********/
 /* FOOTER DETAILS */
-/**********/
 
 footer details {
 	/* border-bottom: 0.1em solid var(--footer-border-color); */
