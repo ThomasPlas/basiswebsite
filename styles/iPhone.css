@@ -202,6 +202,9 @@ main section:nth-of-type(2):has( [value="desertTitanium"]:checked ) p:nth-of-typ
 
 /* alles hierboven laten checken */
 
+
+
+
 /* ********* */
 /* section 3 */
 /* ********* */
@@ -452,6 +455,10 @@ main section:nth-of-type(3) button:nth-of-type(2) span:nth-of-type(2){
 
 
 
+
+
+
+
 /* ********* */
 /* scroll based animation */
 /* ********* */
@@ -462,14 +469,14 @@ main section:nth-of-type(4){
     display: grid;
     justify-items: center;
     background-color: black;
-    height: 80em;
+    height: 70em;
     grid-template-rows: 6em 30em auto;
-    overflow: clip;
     /* overflow-x: hidden; */
+    overflow: clip;
 }
 
 main section:nth-of-type(4) img{
-    height: 25em;
+    height: 30em;
     overflow:hidden;
 }
 
@@ -483,7 +490,17 @@ main section:nth-of-type(4) h2{
     text-align: center;
     align-self: center;
     hyphens: auto;
-    hyphenate-limit-chars: 20;
+    max-width: 13em;
+}
+@media screen and (min-width: 50em){
+    main section:nth-of-type(4) h2{
+        max-width: 12em;
+    }
+}
+@media screen and (min-width: 70em){
+    main section:nth-of-type(4) h2{
+        max-width: 11em;
+    }
 }
 
 main section:nth-of-type(4) img{
@@ -515,30 +532,30 @@ main section:nth-of-type(4) img{
 
 @media (prefers-reduced-motion: no-preference){
     main section:nth-of-type(4) img:nth-of-type(1){
-        opacity: 1; scale: 3.5;
+        opacity: 1; scale: 3;
         animation: verscheinFoto linear forwards;
-        animation-timeline: view(35em);
+        animation-timeline: view();
         animation-range: contain ;
     }
 
     @keyframes verscheinFoto {
         to{
-            opacity: 1; scale: .9;
+            opacity: 1; scale: .6;
         }
     }
 }
 
 @media (prefers-reduced-motion: no-preference){
     main section:nth-of-type(4) img:nth-of-type(2){
-        opacity: 0.0; scale: 3.5; 
+        opacity: 0.0; scale: 3; 
         animation: verscheinTelefoon linear forwards;
-        animation-timeline: view(35em);
+        animation-timeline: view();
         animation-range: contain;
     }
 
     @keyframes verscheinTelefoon {
         to{
-            opacity: 1; scale: .93;
+            opacity: 1; scale: .63;
         }
     }
 }
@@ -555,8 +572,10 @@ main section:nth-of-type(4) img{
 main section:nth-of-type(5){
     display: grid;
     grid-template-columns: 2em repeat(2, 1fr) 2em;
+    grid-template-rows: 3em repeat(7, auto) 3em;
     background-color: var(--background-color-pagina2);
     gap: 2em;
+    overflow: clip;
 }
 
 main section:nth-of-type(5) h2{
@@ -564,14 +583,12 @@ main section:nth-of-type(5) h2{
     font-size: 2.4em;
     text-align: center;
     justify-self: center;
-    grid-area: 2/2/3/4;
+    grid-area: 3/2/4/4;
     max-width: 8em;
+    z-index: 3;
 }  
 
 
-main section:nth-of-type(5) h2 strong{
-    grid-area: 2/2/3/4;
-}
 
 @media (prefers-reduced-motion: no-preference){
     main section:nth-of-type(5) h2 strong{
@@ -584,8 +601,8 @@ main section:nth-of-type(5) h2 strong{
 }
 
 main section:nth-of-type(5) img{
-    grid-area: 1/2/2/4;
-    width: 100%;
+    grid-area: 2/2/3/4;
+    height: 20em;
     justify-self: center;
 }
 
@@ -616,7 +633,7 @@ main section:nth-of-type(5) p strong{
 }
 
 main section:nth-of-type(5) p:nth-of-type(1){
-    grid-area: 3/2/4/4;
+    grid-area: 4/2/5/4;
     font-weight: bold;
     font-size: 1.1em;
     max-width: 90%;
@@ -632,18 +649,18 @@ main section:nth-of-type(5) p:nth-of-type(5){
 }
 
 main section:nth-of-type(5) p:nth-of-type(2){
-    grid-area: 4/2/5/4;
-}
-main section:nth-of-type(5) p:nth-of-type(3){
     grid-area: 5/2/6/4;
 }
-main section:nth-of-type(5) p:nth-of-type(4){
+main section:nth-of-type(5) p:nth-of-type(3){
     grid-area: 6/2/7/4;
 }
-main section:nth-of-type(5) p:nth-of-type(5){
+main section:nth-of-type(5) p:nth-of-type(4){
     grid-area: 7/2/8/4;
 }
-main section:nth-of-type(5) label{
+main section:nth-of-type(5) p:nth-of-type(5){
+    grid-area: 8/2/9/4;
+}
+/* main section:nth-of-type(5) label{
     grid-area: 8/2/9/4;
 }
 main section:nth-of-type(5) select{
@@ -654,9 +671,9 @@ main section:nth-of-type(5) p:nth-of-type(6){
 }
 main section:nth-of-type(5) p:nth-of-type(7){
     grid-area: 11/2/12/4;
-}
+} */
 
-@media screen and (min-width: 40em){
+@media screen and (min-width: 50em){
     main section:nth-of-type(5){
         grid-template-columns: 8em repeat(2, 1fr) 8em;
     }
@@ -665,18 +682,18 @@ main section:nth-of-type(5) p:nth-of-type(7){
         max-width: 37em;
     }
     main section:nth-of-type(5) p:nth-of-type(2){
-        grid-area: 4/2/5/3;
-    }
-    main section:nth-of-type(5) p:nth-of-type(3){
-        grid-area: 4/3/5/4;
-    }
-    main section:nth-of-type(5) p:nth-of-type(4){
         grid-area: 5/2/6/3;
     }
-    main section:nth-of-type(5) p:nth-of-type(5){
+    main section:nth-of-type(5) p:nth-of-type(3){
         grid-area: 5/3/6/4;
     }
-    main section:nth-of-type(5) label{
+    main section:nth-of-type(5) p:nth-of-type(4){
+        grid-area: 6/2/7/3;
+    }
+    main section:nth-of-type(5) p:nth-of-type(5){
+        grid-area: 6/3/7/4;
+    }
+    /* main section:nth-of-type(5) label{
         grid-area: 6/2/7/4;
     }
     main section:nth-of-type(5) select{
@@ -687,26 +704,254 @@ main section:nth-of-type(5) p:nth-of-type(7){
     }
     main section:nth-of-type(5) p:nth-of-type(7){
         grid-area: 8/3/9/4;
-    }
-
-
+    } */
 }
 
 
 
 
+
+
+/* ********* */
+/* section 6 */
+/* ********* */
+main section:nth-of-type(6){
+    background-color: var(--achtergrond-apple);
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 2em repeat(2, 1fr) 2em;
+    grid-template-rows: 3em 14em repeat(8, auto) 3em;
+    gap: 2em;
+}
+
+main section:nth-of-type(6) h2{
+    color: var(--header-h2-pagina2);
+    font-size: 2.4em;
+    text-align: start;
+    justify-self: center;
+    grid-area: 2/2/4/4;
+    max-width: 6em;
+    margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference){
+    main section:nth-of-type(6) h2 strong{
+        color: var(--header-h2-pagina2);
+        text-shadow: none;
+        animation: veranderTitel linear forwards;
+        animation-timeline: view();
+        animation-range: contain;
+    }
+}
+main section:nth-of-type(6) p{
+    color: var(--tekst-p-pagina2);
+    font-size: 1.1em;
+}
+main section:nth-of-type(6) p strong{
+    color: var(--tekst-p-strong);
+}
+
+main section:nth-of-type(6) p:nth-of-type(1){
+    grid-area: 3/2/4/4;
+}
+main section:nth-of-type(6) p:nth-of-type(2){
+    grid-area: 4/2/5/4;
+}
+
+main section:nth-of-type(6) p:nth-of-type(3){
+    grid-area: 5/2/6/4;
+}
+main section:nth-of-type(6) p:nth-of-type(4){
+    grid-area: 6/2/7/4;
+}
+
+main section:nth-of-type(6) p:nth-of-type(3) strong,
+main section:nth-of-type(6) p:nth-of-type(4) strong{
+    font-size: 2.5em;
+}
+
+main section:nth-of-type(6) p:nth-of-type() strong{
+    color: var(--tekst-p-strong);
+}
+
+main section:nth-of-type(6) label{
+    grid-area: 7/2/8/4;
+    color: var(--apple-wit);
+    font-size: 1.4em;
+    align-self: center;
+}
+main section:nth-of-type(6) select{
+    grid-area: 8/2/9/4;
+    background-color: var(--achtergrond-apple);
+    padding: .3em;
+    border: .1em solid var(--tekst-p-pagina2);
+    border-radius: 1em;
+    color: var(--apple-wit);
+    font-size: 1.4em;
+    max-width: 15em;
+}
+
+main section:nth-of-type(6) p{
+    opacity: 0;
+}
+
+main section:nth-of-type(6) p:nth-of-type(1),
+main section:nth-of-type(6) p:nth-of-type(2),
+main section:nth-of-type(6) p:nth-of-type(3),
+main section:nth-of-type(6) p:nth-of-type(4){
+    opacity: 1;
+}
+
+main section:nth-of-type(6) p:nth-of-type(5),
+main section:nth-of-type(6) p:nth-of-type(6),
+main section:nth-of-type(6) p:nth-of-type(7),
+main section:nth-of-type(6) p:nth-of-type(8),
+main section:nth-of-type(6) p:nth-of-type(9),
+main section:nth-of-type(6) p:nth-of-type(10),
+main section:nth-of-type(6) p:nth-of-type(11),
+main section:nth-of-type(6) p:nth-of-type(12){
+    grid-area: 9/2/10/4;
+}
+
+main section:nth-of-type(6) p:nth-of-type(13),
+main section:nth-of-type(6) p:nth-of-type(13),
+main section:nth-of-type(6) p:nth-of-type(15),
+main section:nth-of-type(6) p:nth-of-type(16),
+main section:nth-of-type(6) p:nth-of-type(17),
+main section:nth-of-type(6) p:nth-of-type(18),
+main section:nth-of-type(6) p:nth-of-type(19),
+main section:nth-of-type(6) p:nth-of-type(20){
+    grid-area: 10/2/11/4;
+}
+
+main section:nth-of-type(6):has( [value="iPhone12"]:checked ) p:nth-of-type(5),
+main section:nth-of-type(6):has( [value="iPhone12"]:checked ) p:nth-of-type(13),
+main section:nth-of-type(6):has( [value="iPhone12Pro"]:checked ) p:nth-of-type(6), 
+main section:nth-of-type(6):has( [value="iPhone12Pro"]:checked ) p:nth-of-type(13),
+main section:nth-of-type(6):has( [value="iPhone13"]:checked ) p:nth-of-type(7), 
+main section:nth-of-type(6):has( [value="iPhone13"]:checked ) p:nth-of-type(15),
+main section:nth-of-type(6):has( [value="iPhone13Pro"]:checked ) p:nth-of-type(8), 
+main section:nth-of-type(6):has( [value="iPhone13Pro"]:checked ) p:nth-of-type(16),
+main section:nth-of-type(6):has( [value="iPhone14"]:checked ) p:nth-of-type(9), 
+main section:nth-of-type(6):has( [value="iPhone14"]:checked ) p:nth-of-type(17),
+main section:nth-of-type(6):has( [value="iPhone14Pro"]:checked ) p:nth-of-type(10), 
+main section:nth-of-type(6):has( [value="iPhone14Pro"]:checked ) p:nth-of-type(18),
+main section:nth-of-type(6):has( [value="iPhone15"]:checked ) p:nth-of-type(11), 
+main section:nth-of-type(6):has( [value="iPhone15"]:checked ) p:nth-of-type(19),
+main section:nth-of-type(6):has( [value="iPhone15Pro"]:checked ) p:nth-of-type(12), 
+main section:nth-of-type(6):has( [value="iPhone15Pro"]:checked ) p:nth-of-type(20){       
+	opacity:1;
+}
+
+/* probeersel*/
+main section:nth-of-type(6) p:nth-of-type(3) strong,
+main section:nth-of-type(6) p:nth-of-type(4) strong,
+main section:nth-of-type(6) p:nth-of-type(5) strong,
+main section:nth-of-type(6) p:nth-of-type(6) strong,
+main section:nth-of-type(6) p:nth-of-type(7) strong,
+main section:nth-of-type(6) p:nth-of-type(8) strong,
+main section:nth-of-type(6) p:nth-of-type(9) strong,
+main section:nth-of-type(6) p:nth-of-type(10) strong,
+main section:nth-of-type(6) p:nth-of-type(11) strong,
+main section:nth-of-type(6) p:nth-of-type(12) strong,
+main section:nth-of-type(6) p:nth-of-type(13) strong,
+main section:nth-of-type(6) p:nth-of-type(14) strong,
+main section:nth-of-type(6) p:nth-of-type(15) strong,
+main section:nth-of-type(6) p:nth-of-type(16) strong,
+main section:nth-of-type(6) p:nth-of-type(17) strong,
+main section:nth-of-type(6) p:nth-of-type(18) strong,
+main section:nth-of-type(6) p:nth-of-type(19) strong,
+main section:nth-of-type(6) p:nth-of-type(20) strong{
+    display: block;
+}
+
+main section:nth-of-type(6) p:nth-of-type(5) strong,
+main section:nth-of-type(6) p:nth-of-type(6) strong,
+main section:nth-of-type(6) p:nth-of-type(7) strong,
+main section:nth-of-type(6) p:nth-of-type(8) strong,
+main section:nth-of-type(6) p:nth-of-type(9) strong,
+main section:nth-of-type(6) p:nth-of-type(10) strong,
+main section:nth-of-type(6) p:nth-of-type(11) strong,
+main section:nth-of-type(6) p:nth-of-type(12) strong,
+main section:nth-of-type(6) p:nth-of-type(13) strong,
+main section:nth-of-type(6) p:nth-of-type(14) strong,
+main section:nth-of-type(6) p:nth-of-type(15) strong,
+main section:nth-of-type(6) p:nth-of-type(16) strong,
+main section:nth-of-type(6) p:nth-of-type(17) strong,
+main section:nth-of-type(6) p:nth-of-type(18) strong,
+main section:nth-of-type(6) p:nth-of-type(19) strong,
+main section:nth-of-type(6) p:nth-of-type(20) strong{
+    background: linear-gradient(90deg, var(--header-h2-glow-schaduw),  var(--header-h2-glow-schaduw-2));
+    background-clip: text;
+    color: transparent;
+    font-size: 1.9em;
+}
+
+@media screen and (min-width: 50em){
+    main section:nth-of-type(6){
+        grid-template-columns: 8em repeat(2, 1fr) 8em;
+    }
+    main section:nth-of-type(6) p:nth-of-type(1){
+        grid-area: 3/2/4/3;
+    }
+    main section:nth-of-type(6) p:nth-of-type(2){
+        grid-area: 3/3/4/4;
+    }
+    
+    main section:nth-of-type(6) p:nth-of-type(3){
+        grid-area: 4/2/5/3;
+    }
+    main section:nth-of-type(6) p:nth-of-type(4){
+        grid-area: 4/3/5/4;
+    }
+    
+    main section:nth-of-type(6) label{
+        grid-area: 5/2/6/3;
+    }
+    main section:nth-of-type(6) select{
+        grid-area: 5/2/6/4;
+        width: 65%;
+        max-width: 65%;
+        justify-self: end;
+    }
+    main section:nth-of-type(6) p:nth-of-type(5),
+    main section:nth-of-type(6) p:nth-of-type(6),
+    main section:nth-of-type(6) p:nth-of-type(7),
+    main section:nth-of-type(6) p:nth-of-type(8),
+    main section:nth-of-type(6) p:nth-of-type(9),
+    main section:nth-of-type(6) p:nth-of-type(10),
+    main section:nth-of-type(6) p:nth-of-type(11),
+    main section:nth-of-type(6) p:nth-of-type(12){
+        grid-area: 7/2/8/3;
+    }
+    main section:nth-of-type(6) p:nth-of-type(13),
+    main section:nth-of-type(6) p:nth-of-type(13),
+    main section:nth-of-type(6) p:nth-of-type(15),
+    main section:nth-of-type(6) p:nth-of-type(16),
+    main section:nth-of-type(6) p:nth-of-type(17),
+    main section:nth-of-type(6) p:nth-of-type(18),
+    main section:nth-of-type(6) p:nth-of-type(19),
+    main section:nth-of-type(6) p:nth-of-type(20){
+        grid-area: 7/3/8/4;
+    }
+}
+
+
 /* ********* */
 /* details */
 /* ********* */
+main section:nth-of-type(7){
+    display: grid;
+    justify-items: center;
+}
 
-main section:nth-of-type(6) div{
+main section:nth-of-type(7) div{
     width: 90%;
     background-color: black;
     color: var(--apple-wit);
     justify-self: center;
     border-radius: 2em;
     padding: 4em 1.3em;
-
 }
 
 main div details:nth-of-type(2),details:nth-of-type(3){

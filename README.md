@@ -60,7 +60,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - In de screen reader ga je langs de footnotes maar dit zijn alleen nummers dus dit is erg onduidelijk
   - Er word gebruik gemaakt van h1,h2 tot h6 maar dit lijkt mij een beetje veel
   - Door de interface heen gaan ging best goed met de screenreader
-  - 
+  - Er was geen dark en light mode aanwezig. de pagina van de iPhone16 is opzichzelf al een darkmode maar de cadeau pagina is een lightmode ookal zet je deze om
+  - als je door het menu heen gaat krijg je de optie om het te openen of niet
 
 </details>
 
@@ -93,26 +94,21 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code):
+    Ik vind code zeld best lastig maar probeer een actieve houding aan te nemen dit blok door vooruit te werken zodat ik vragen kan stellen in de les en beter mee kan doen. Dit heeft tot nu toe goed gewerkt en ik merk hierdoor ook dat ik makkelijker dingen oppak
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
   | Thomas         | Izaira             | Rens         | Jerry            |
   | ---            | ---                | ---          | ---              |
-  | pixels bij     | en dit             | en ik dit    | en dan ik dat    |
-  | responsiveness | dit als er tijd is | nog een punt | dit wil ik zeker |
-  |                | ...                | ...          | ...              |
-  | is een         | ...                | ...          | ...              |
-  | background img  | ...               | ...          | ...              |
-  | symatisch en een| ...               | ...          | ...              |
-  | probleem qua    | ...               | ...          | ...              |
-  | toegankelijkheid| ...               | ...          | ...              |
-  |                | ...                | ...          | ...              |
-  | veel kleuren in | ...               | ...          | ...              |
-  | mijn site maar | ...                | ...          | ...              |
-  |mag ik dit inkorten | ...            | ...          | ...              |
+  | pixels bijresponsiveness     | en dit             | en ik dit    | en dan ik dat    |
+  |  | dit als er tijd is | nog een punt | dit wil ik zeker |
+  |  is een background img symatisch en een probleem qua toegankelijkheid          | ...                | ...          | ...              |
+  |          | ...                | ...          | ...              |
+  |  veel kleuren in mijn site maar mag ik dit inkorten| ...               | ...          | ...              |
+  | | ...               | ...          | ...              |
+
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
@@ -134,13 +130,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code):
+    Ik heb mijn eerste pagina voor een groot gedeelte af maar ik merk dat ik nu wat moeilijkere code wil gaan uitproberen maar ik kijk meteen naar het resultaat en zie de bomen door het bos niet meer. Ik ga dus nu proberen om stap voor stap de verschillende code aan te pakken
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Thomas      | Izaira        | Rens   | Jerry        |
   | ---            | ---                | ---          | ---              |
   |                | en dit             | en ik dit    | en dan ik dat    |
   | ik heb een bug wanneer ik een background blur maak dat de aanpassingen voor het hamburgermenu ongedaan| dit als er tijd is | nog een punt | dit wil ik zeker |
@@ -187,25 +183,26 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+    Ik ben erg tevreden met wat ik tot nu toe heb gemaakt alleen moet ik nu nog echt even een sprintje zetten voor de eindoplevering om alles netjes af te maken.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Thomas     | Izaira        | Rens    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | mijn 2de pagina is op zichzelf al een darkmode. wat moet ik dan doen voor de lightmode vooral omdat alle foto's zwart zijn  | en dit             | en ik dit    | en dan ik dat    |
+  | Volgens MDN mag je een Name geven aan een details zodat er maar 1 open kan per keer maar ik krijg hier een foutmelding uit dus is dit goed | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - ik moest overflow gebruiken omdat bij mijn scrollbased animation de randen buiten het scherm vielen. (ik snapte dit eerst niet omdat ik overflow hidden had toegepast maar dan gaat de scroll animation stuk maar met clip blijft hij wel werken)
+  - ik mag de foto's inverten bij de light mode als dit er cool uit ziet
+  - het was goed om een name te gebruiken voor details
+  - we kregen uitleg over hoe een carousel te maken wat ik al had maar we kregen wel wat extra info over hoe wij knoppen konden gebruiken om vooruit en achteruit te gaan
+  - ik had een probleem met de blurred background dat mijn volledige pagina buggy werd. de student assistenten hadden mij verteld dat ik dit moest oplossen als ik tijd over had maar Sanne gaf aan dat ik de items los moest koppelen van de header waardoor de menu items niet zouden breken.
 
 </details>
 

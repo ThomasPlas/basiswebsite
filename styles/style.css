@@ -500,7 +500,7 @@ header nav li:nth-of-type(1) section{
 footer{
 	background-color: var(--footer-background);
 	color: var(--footer-text-color);
-	font-size: 0.9em;
+	font-size: .9em;
 }
 
 footer a{
@@ -510,6 +510,10 @@ footer a{
 
 footer a:hover{
 	color: var(--footer-color-hover);
+}
+
+footer ol{
+	padding-left: .9em;
 }
 
 footer details li{
@@ -525,23 +529,27 @@ footer p a{
 
 footer details {
 	/* border-bottom: 0.1em solid var(--footer-border-color); */
-	padding: 0.5em 0.5em 0;
+	padding: .5em .5em 0;
 }
 
 footer details[open] {
-	padding: 0.5em;
+	padding: .5em;
 }
 
 footer details[open] summary {
-	border-bottom: 0.1em solid var(--footer-border-color);
-	margin-bottom: 0.5em;
+	border-bottom: .1em solid var(--footer-border-color);
+	margin-bottom: .5em;
 }
    
 footer summary {
-	border-bottom: 0.1em solid var(--footer-border-color);
-	margin: -0.5em -0.5em 0;
-	padding: 0.5em;
+	border-bottom: .1em solid var(--footer-border-color);
+	margin: -.5em -.5em 0;
+	padding: .5em;
 	color: var(--footer-link-color);
+}
+
+footer{
+	padding: .9em;
 }
   
 
