@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Rood/Zwart
 
   #### Je focus:
-  surface plane
+  responsive en surface plane
  
 </details>
 
@@ -73,14 +73,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/homepagina1.PNG" width="375px" alt="breakdown van de hele pagina">
-  <img src="readme-images/homepagina2.PNG" width="375px" alt="breakdown van de hele pagina deel 2">
+  <img src="readme-images/homepagina1.png" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/homepagina2.Png" width="375px" alt="breakdown van de hele pagina deel 2">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/animatie.PNG" width="375px" alt="Een scrollbased animation van een filmpje dat die uitzoomd wanneer je scrolled">
+  <img src="readme-images/animatie.png" width="375px" alt="Een scrollbased animation van een filmpje dat die uitzoomd wanneer je scrolled">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/animatie.PNG" width="375px" alt="Een Carrousel van verschillende functies van de iPhone 16 pro">
+  <img src="readme-images/animatie.png" width="375px" alt="Een Carrousel van verschillende functies van de iPhone 16 pro">
 
 </details>
 
@@ -166,9 +166,24 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 <details>
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
-
+  fotos van de test:
+  <img src="readme-images/check1.jpg" width="375px" alt="de eerste pagina van de toegankelijkheidstest">
+  <img src="readme-images/check2.jpg" width="375px" alt="de tweede pagina van de toegankelijkheidstest">
+  <img src="readme-images/check3.jpg" width="375px" alt="de derde pagina van de toegankelijkheidstest">
+  <img src="readme-images/check4.jpg" width="375px" alt="de vierde pagina van de toegankelijkheidstest">
+  <img src="readme-images/check5.jpg" width="375px" alt="de vijfde pagina van de toegankelijkheidstest">
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+
+  -  ik heb nog geen skip links: hier ga ik nog wel naar kijken voor de eindoplevering
+  - ik heb mijn darkmode nog niet helemaal gemaakt. Update nu wel
+  - Ik heb de koppen overgenomen van apple en ik zit nu toch te denken of ik deze moet aanpassen omdat ze wel figure of speech gebruiken
+  - In de les heb ik mijn site gevalideerd en ik had maar 1 foutje die ik nu heb opgelost (dit was de h1 waar ik het apple logo had neergest als het teken inplaats van een svg met een display hidden op de tekst zodat de screen reader er wel overheen kan lezen)
+  - Mijn focus states zijn goed zichtbaar met een blauwe rand
+  - mijn images hebben een alt behalve als deze alleen maar is als decoratief dan gebruik ik een lege alt=""
+  - ik maak gebruik van h1, h2, h3 in volgorde van elkaar dus ik sla niks over. Ik heb ook geen losse h5 die apple wel had
+  - Ik heb op mijn animaties een (prefers-reduced-motion: no-preference) toegevoegd zodat als mensen hun instellingen aan hebben staan op dat er minder beweging op het scherm te zien is er geen last van zullen hebben. 
+  
 
 </details>
 
@@ -221,14 +236,21 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
-
+  <img src="readme-images/menu_balk.png" width="375px" alt="mijn zoekbalk met een sluitknop die werkt bij shop, zoeken en nav">
+  ik ben erg blij dat de sluit knop van mijn header ook werkt bij de shop en zoeken.
+  <img src="readme-images/scroll_based_animation1.png" width="375px" alt="de eerste state van de scroll based animation">
+  <img src="readme-images/scroll_based_animation2.png" width="375px" alt="de tweede state van de scroll based animation">
+  Ik ben ook erg blij met mijn scroll based animation waarbij een foto na scrollen een telefoon wordt.
+  <img src="readme-images/has_verschil_iPhones.png" width="375px" alt="via has kan je de tekst veranderen van de verschillende om het verschil te zien tussen iphones met select option">
+  <img src="readme-images/has_verschillende_iphones.png" width="375px" alt="via has kan je de fotos veranderen van de verschillende iphones met checkboxes">
+  Het gebruik van has ben ik ook heel blij mee om via de checkboxes en de select options verschillende opties te kunnen tonen.
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Korte omschrijving met plaatjes:
+  <img src="readme-images/niet_gelukt1.png" width="375px" alt="bummer">
+  ik heb een scroll based animation gemaakt en ik wou deze met picture ook voor groot scherm maar dit ging echt helemaal mis
+  <img src="readme-images/niet_gelukt2.png" width="375px" alt="bummer">
+  Ik wou op groot scherm er voor zorgen dat je over de nav items heen scrollen dat een extra navigatie openklapte maar toen ik dit had gemaakt tripte dit heel erg.
 </details>
 
 
