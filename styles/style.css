@@ -21,6 +21,7 @@
 	--achtergrond-apple:#fafafc;
 
 	--link-blauw:#0071e3;
+	--link-blauw-inverted:#ff8e1c;
 
 /* header */
 	--header-tekst:#1d1d1f;
@@ -56,6 +57,8 @@
 	--tekst-p-pagina2: #86868b;
 	--tekst-p-strong: rgb(255, 255, 255);
 	--button-carousel: rgb(53,52,54);
+
+	--tekst-pagina2-stijl2: #f5f5f7;
 }
 
 /*********************/
@@ -66,7 +69,7 @@
 		--apple-zwart:#1d1d1f;
 		--apple-wit:#f5f5f7;
 
-		--achtergrond-apple:#161617;
+		--achtergrond-apple:rgb(0, 0, 0);
 	
 	/* header */
 		--header-h3:#c4c4c4;
@@ -82,10 +85,29 @@
 		--footer-link-color: rgba(255, 255, 255, 0.80);
 		--footer-directory-title-color: rgba(255, 255, 255, 0.95);
 		--footer-color-hover: #ffffff;
-
 	}
-
 }
+
+/* ik heb dit zo gedaan omdat de dark mode de standaart is */
+@media (prefers-color-scheme: light){
+	:root{
+		--background-color-pagina2: #fafafc;
+		--tekst-pagina2-stijl2: #000000;
+		--button-carousel: rgb(228, 228, 228);
+		--tekst-p-pagina2: #626262;
+		--background-color-gradient: rgb(222, 216, 214);
+
+		/* voor de inverted kleuren */
+		--header-h2-pagina2: rgb(114, 114, 114);
+		--header-h2-glow: rgb(0, 0, 0);
+		--header-h2-glow-schaduw: rgb(125, 180, 204);
+		--header-h2-glow-schaduw-2: rgb(151, 81, 176);
+		--tekst-p-strong: rgb(0, 0, 0);		
+	}
+}
+
+	/* pagina 2 */
+	
 
 /*********/
 /* FONTS */
@@ -281,6 +303,7 @@ header section:nth-of-type(1){
 	padding:3.4em 3em 0 3em;
 }
 
+
 header section ul{
 	padding-left: 1em;
 }
@@ -296,13 +319,19 @@ header section a{
 	font-size: 1.1em;
 }
 
-header h2{
-	margin-top: 0;
-}
-
 header h3{
 	color: var(--header-h3);
 	font-weight: normal;	
+}
+
+header > section:nth-of-type(1) h2{
+	color: var(--header-h3);
+	font-weight: normal;
+	font-size: 1.2em;
+}
+
+header > section:nth-of-type(2) h2{
+	margin-top: 0;
 }
 
 header input{

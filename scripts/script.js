@@ -78,3 +78,13 @@ function showStoreNaviagtie(){
     storeNavigatie.classList.toggle("open")
 }
 
+// menu kunnen sluiten met escape
+document.body.addEventListener("keydown", (ev) =>{
+    if(ev.key == "Escape"){
+        console.log("sluit menu")
+        zoekScherm.classList.remove("open");
+        navigatie.classList.remove("open");
+        winkelMandje.classList.remove("open");
+        menuButtonClick()
+    }
+})
