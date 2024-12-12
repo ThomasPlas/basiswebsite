@@ -9,8 +9,6 @@
 /* JOUW STYLING */
 /****************/
 
-/* jouw code */
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
@@ -242,13 +240,10 @@ header button{
 header button:nth-of-type(1){
 	z-index: 100;
 	position: relative;
-
 	height:2.75em;
 	aspect-ratio:1/1;
-
 	padding:0;
 	border:none;
-
 	order: 4;
 }
 
@@ -281,11 +276,11 @@ header button:nth-of-type(1) span:nth-of-type(2){
 
 header button:nth-of-type(1)[aria-expanded="true"] span:nth-of-type(1) {
 	transform:rotate(45deg) scalex(1.25);
-  }
+}
   
 header button:nth-of-type(1)[aria-expanded="true"] span:nth-of-type(2) {
 	transform:rotate(-45deg) scalex(1.25);
-  }
+}
 
 /* zoekbalk */
 header section:nth-of-type(1){
@@ -297,12 +292,8 @@ header section:nth-of-type(1){
 	translate: 0% -100%;
 	transition: 0.5s;
 	background-color: var(--hamburger-header-background);
-	
-
-	/* vragen of dit oke is want apple doet dit ook */
 	padding:3.4em 3em 0 3em;
 }
-
 
 header section ul{
 	padding-left: 1em;
@@ -351,9 +342,6 @@ header section:nth-of-type(2){
 	translate: 0% -100%;
 	transition: 0.5s;
 	background-color: var(--hamburger-header-background);
-	
-
-	/* vragen of dit oke is want apple doet dit ook */
 	padding:3.4em 3em 0 3em;
 }
 
@@ -507,20 +495,9 @@ header nav li:nth-of-type(1) section{
 	}
 }
 
-
-
-
-
 /********/
 /* MAIN */
 /********/
-
-/* img{
-	max-width: 100%;
-} */
-
-
-
 
 
 /**********/

@@ -2,21 +2,9 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 
-/********************/
-/* ALGEMENE STYLING */
-/********************/
-
-/**********/
-/* HEADER */
-/**********/
-
 /********/
 /* MAIN */
 /********/
-
-/**********/
-/* FOOTER */
-/**********/
 
 main{
     display: grid;
@@ -24,6 +12,9 @@ main{
     column-gap: .7em;
     background-color: var(--achtergrond-apple);
 }
+
+
+
 
 /**********/
 /* sections */
@@ -118,6 +109,9 @@ main section:nth-of-type(1) a:nth-of-type(2),main section:nth-of-type(1) a:nth-o
 main section:nth-of-type(1) a:nth-of-type(2),main section:nth-of-type(1) a:nth-of-type(3){
     border-color: var(--link-blauw);
 }
+
+
+
 
 /**********/
 /* section 2 */
@@ -232,6 +226,9 @@ main section:nth-of-type(4) a:nth-of-type(2),main section:nth-of-type(4) a:nth-o
         grid-area: 4 / 1 / 5 / 3;
     }
 }
+
+
+
 
 /**********/
 /* Carousel*/
